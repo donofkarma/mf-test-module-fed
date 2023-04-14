@@ -10,7 +10,7 @@ const moduleFederationPlugin = require("./module-federation");
 module.exports = merge(sharedWebpackConfig, {
   output: {
     path: path.resolve(__dirname, "../build/client"),
-    publicPath: `${process.env.VERCEL_URL}/client/`,
+    publicPath: `${process.env.VERCEL_URL_PROTOCOL}${process.env.VERCEL_URL}/client/`,
   },
   plugins: [
     new DefinePlugin({
